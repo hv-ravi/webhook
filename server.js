@@ -8,7 +8,7 @@ app.use(express.json());
 const events = []; // store webhook payloads
 
 // Webhook endpoint
-app.all("/webhook", (req, res) => {
+app.get("/webhook", (req, res) => {
   const data = {
     method: req.method,
     headers: req.headers,
